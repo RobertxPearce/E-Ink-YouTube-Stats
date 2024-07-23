@@ -1,5 +1,6 @@
 # YouTube Stats Display on Waveshare E-ink Display
-This repository contains the necessary code and instructions to set up a Raspberry Pi Zero W with a Waveshare Three Color 2.13-inch E-ink Display HAT to display YouTube channel statistics including subscriber count, view count, and video count. The project fetches the statistics using the YouTube Data API and updates the display at regular intervals.
+
+This project sets up a Raspberry Pi Zero W with a Waveshare Three Color 2.13-inch E-ink Display HAT to display YouTube channel statistics, including subscriber count, view count, and video count. The stats are fetched using the YouTube Data API and displayed in a organized layout.
 
 ## Requirements
 
@@ -28,6 +29,7 @@ This repository contains the necessary code and instructions to set up a Raspber
         key_mgmt=WPA-PSK
     }
     ```
+
 ### 2. Connect and Set Up the E-ink Display
 
 1. Attach the E-ink display HAT to the GPIO pins of the Raspberry Pi Zero W.
@@ -61,7 +63,7 @@ This repository contains the necessary code and instructions to set up a Raspber
     ```bash
     pip3 install google-api-python-client
     ```
-2. Create a Python script to fetch and display YouTube stats:
+2. Use the provided `display_youtube_stats.py` script in this repository to fetch and display YouTube stats. Make sure to update the script with your YouTube API key and channel ID.
 
 ### 6. Run the Script
 
@@ -83,6 +85,5 @@ This repository contains the necessary code and instructions to set up a Raspber
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
----
