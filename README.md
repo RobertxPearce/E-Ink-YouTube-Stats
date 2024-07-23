@@ -62,53 +62,6 @@ This repository contains the necessary code and instructions to set up a Raspber
     pip3 install google-api-python-client
     ```
 2. Create a Python script to fetch and display YouTube stats:
-    ```python
-    import time
-    from PIL import Image, ImageDraw, ImageFont
-    from waveshare_epd import epd2in13b_V3
-    from googleapiclient.discovery import build
-
-    api_key = 'YOUR_YOUTUBE_API_KEY'
-    channel_id = 'YOUR_CHANNEL_ID'
-
-    youtube = build('youtube', 'v3', developerKey=api_key)
-
-    request = youtube.channels().list(
-        part='statistics',
-        id=channel_id
-    )
-    response = request.execute()
-
-    stats = response['items'][0]['statistics']
-    subs = stats['subscriberCount']
-    views = stats['viewCount']
-    videos = stats['videoCount']
-
-    epd = epd2in13b_V3.EPD()
-    epd.init()
-
-    image = Image.new('1', (epd.height, epd.width), 255)
-    draw = ImageDraw.Draw(image)
-
-    font = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 18)
-
-    draw.line((0, 0, epd.width, 0), fill=0)
-    draw.line((0, epd.height-1, epd.width, epd.height-1), fill=0)
-    draw.text((10, 10), 'Subscribers:', font=font, fill=0)
-    draw.text((10, 40), 'Views:', font=font, fill=0)
-    draw.text((10, 70), 'Videos:', font=font, fill=0)
-
-    draw.text((140, 10), subs, font=font, fill=0)
-    draw.text((140, 40), views, font=font, fill=0)
-    draw.text((140, 70), videos, font=font, fill=0)
-
-    # Draw YouTube logo
-    youtube_logo = Image.open('path_to_youtube_logo.png')  # Ensure you have a logo file
-    image.paste(youtube_logo, (epd.width - youtube_logo.width - 10, 10))
-
-    epd.display(epd.getbuffer(image))
-    epd.sleep()
-    ```
 
 ### 6. Run the Script
 
