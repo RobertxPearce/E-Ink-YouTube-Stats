@@ -72,18 +72,7 @@ This project sets up a Raspberry Pi Zero W with a Waveshare Three Color 2.13-inc
     python3 display_youtube_stats.py
     ```
 
-### 7. Automate the Process
-
-1. Create a cron job to update the stats periodically:
-    ```bash
-    crontab -e
-    ```
-2. Add the following line to update the stats every hour:
-    ```bash
-    0 * * * * /usr/bin/python3 /home/pi/display_youtube_stats.py
-    ```
-
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is licensed under the MIT License.
 
