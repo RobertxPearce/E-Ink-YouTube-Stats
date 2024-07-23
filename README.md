@@ -28,7 +28,6 @@ This repository contains the necessary code and instructions to set up a Raspber
         key_mgmt=WPA-PSK
     }
     ```
-
 ### 2. Connect and Set Up the E-ink Display
 
 1. Attach the E-ink display HAT to the GPIO pins of the Raspberry Pi Zero W.
