@@ -3,7 +3,7 @@
 This project sets up a Raspberry Pi Zero W with a Waveshare Three Color 2.13-inch E-ink Display HAT to display YouTube channel statistics, including subscriber count, view count, and video count. The stats are fetched using the YouTube Data API and displayed in a organized layout.
 
 ### Closer Look
-![IMG_2956](https://github.com/user-attachments/assets/a0a40e8c-6dfb-4857-937e-7bb5dd4433d1)
+![IMG_2958-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/4ac523d7-a86f-4229-b22c-d22580e631a6)
 
 
 ## Requirements
