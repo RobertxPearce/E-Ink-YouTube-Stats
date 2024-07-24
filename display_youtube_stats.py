@@ -77,7 +77,7 @@ def display_stats_on_eink(stats):
         epd2in13_V3.epdconfig.module_exit(cleanup=True)
 
 
-if __name__ == '__main__':
+def main():
     try:
         while True:
             try:
@@ -98,3 +98,6 @@ if __name__ == '__main__':
         # Log the interruption and clean up the GPIO.
         logging.info("Program interrupted")
         epd2in13_V3.epdconfig.module_exit(cleanup=True)
+
+if __name__ == '__main__':
+main()
