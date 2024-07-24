@@ -20,9 +20,9 @@ This project sets up a Raspberry Pi Zero W with a Waveshare Three Color 2.13-inc
 
 1. Download and install Raspberry Pi Imager from the [official website](https://www.raspberrypi.org/software/).
 2. Use Raspberry Pi Imager to write the Raspberry Pi OS to a microSD card.
-  * Set Username and Password
-  * Configure Wifi
-  * Enable SSH
+    * Set Username and Password
+    * Configure Wifi
+    * Enable SSH
 
 ### 2. Connect and Set Up the E-ink Display
 
