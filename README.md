@@ -11,7 +11,7 @@ This project sets up a Raspberry Pi Zero W with a Waveshare Three Color 2.13-inc
 - Raspberry Pi Zero W
 - Waveshare Three Color 2.13-inch E-ink Display HAT(B)
 - MicroSD card with Raspberry Pi OS
-- Wi-Fi connection
+- Wifi connection
 - YouTube Data API key
 
 ## Setup Instructions
@@ -20,19 +20,9 @@ This project sets up a Raspberry Pi Zero W with a Waveshare Three Color 2.13-inc
 
 1. Download and install Raspberry Pi Imager from the [official website](https://www.raspberrypi.org/software/).
 2. Use Raspberry Pi Imager to write the Raspberry Pi OS to a microSD card.
-3. Create a file named `ssh` (without any extension) in the boot partition to enable SSH.
-4. Create a file named `wpa_supplicant.conf` in the boot partition with your Wi-Fi credentials:
-    ```plaintext
-    country=US
-    ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-    update_config=1
-
-    network={
-        ssid="YOUR_SSID"
-        psk="YOUR_PASSWORD"
-        key_mgmt=WPA-PSK
-    }
-    ```
+  * Set Username and Password
+  * Configure Wifi
+  * Enable SSH
 
 ### 2. Connect and Set Up the E-ink Display
 
