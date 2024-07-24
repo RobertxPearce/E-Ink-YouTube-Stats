@@ -43,7 +43,13 @@ This project sets up a Raspberry Pi Zero W with a Waveshare Three Color 2.13-inc
 1. Clone the Waveshare E-ink GitHub repository:
     ```bash
     git clone https://github.com/waveshare/e-Paper
+    ```
+
+    ```bash
     cd e-Paper/RaspberryPi_JetsonNano/python
+    ```
+
+    ```bash
     sudo python3 setup.py install
     ```
 
