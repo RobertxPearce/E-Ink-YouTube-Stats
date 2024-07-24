@@ -30,8 +30,10 @@ This project sets up a Raspberry Pi Zero W with a Waveshare Three Color 2.13-inc
 2. Boot up the Raspberry Pi and SSH into it.
 3. Update the package list and install dependencies:
     ```bash
-    sudo apt update
-    sudo apt upgrade -y
+    sudo apt update && upgrade
+    ```
+
+    ```bash
     sudo apt install python3-pip python3-pil python3-numpy git
     sudo apt install python3-RPi.GPIO python3-spidev
     ```
