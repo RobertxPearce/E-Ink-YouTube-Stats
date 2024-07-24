@@ -9,7 +9,7 @@ This project sets up a Raspberry Pi Zero W with a Waveshare Three Color 2.13-inc
 ## Requirements
 
 - Raspberry Pi Zero W
-- Waveshare Three Color 2.13-inch E-ink Display HAT
+- Waveshare Three Color 2.13-inch E-ink Display HAT(B)
 - MicroSD card with Raspberry Pi OS
 - Wi-Fi connection
 - YouTube Data API key
