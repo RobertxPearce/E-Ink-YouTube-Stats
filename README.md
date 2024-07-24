@@ -76,8 +76,9 @@ This project sets up a Raspberry Pi Zero W with a Waveshare Three Color 2.13-inc
     python3 display_youtube_stats.py
     ```
 2. Run the script in the background:
-`nohup python3 your_script_name.py &`
-
+    ```bash
+    nohup python3 your_script_name.py &
+    ```
 
 ## License
 
