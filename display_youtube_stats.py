@@ -13,10 +13,10 @@ import traceback
 logging.basicConfig(level=logging.DEBUG)
 
 # Your YouTube API key
-API_KEY = 'AIzaSyC4RfxUyo7S0f_pflCMOU1ThgSMVjofoK8'
+API_KEY = 'YOUR API KEY'
 
 # Your YouTube channel ID
-CHANNEL_ID = 'UC8tHiyp4m4q2o3FtZWK54tQ'  # Replace this with your actual channel ID
+CHANNEL_ID = 'YOUR CHANNEL ID'  # Replace this with your actual channel ID
 
 def get_youtube_stats(api_key, channel_id):
     """
