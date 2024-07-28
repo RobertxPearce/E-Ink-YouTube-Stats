@@ -40,6 +40,7 @@ This project sets up a Raspberry Pi Zero W with a Waveshare Three Color 2.13-inc
    sudo apt-get install python3-numpy
    sudo pip3 install RPi.GPIO
    sudo pip3 install spidev
+   pip install waveshare-epd --break-system-package
    ```
 
 ### 3. Clone the Waveshare E-ink Repository
