@@ -23,6 +23,7 @@ This project sets up a Raspberry Pi Zero W with a Waveshare Three Color 2.13-inc
     * Set Username and Password
     * Configure Wifi
     * Enable SSH
+    * Enable SPI
 
 ### 2. Connect and Set Up the E-ink Display
 
@@ -32,14 +33,14 @@ This project sets up a Raspberry Pi Zero W with a Waveshare Three Color 2.13-inc
     ```bash
     sudo apt update && upgrade
     ```
-
-    ```bash
-    sudo apt install python3-RPi.GPIO python3-spidev
-    ```
-
-    ```bash
-    sudo apt install python3-RPi.GPIO python3-spidev
-    ```
+   ```bash
+   sudo apt-get update
+   sudo apt-get install python3-pip
+   sudo apt-get install python3-pil
+   sudo apt-get install python3-numpy
+   sudo pip3 install RPi.GPIO
+   sudo pip3 install spidev
+   ```
 
 ### 3. Clone the Waveshare E-ink Repository
 
@@ -49,11 +50,11 @@ This project sets up a Raspberry Pi Zero W with a Waveshare Three Color 2.13-inc
     ```
 
     ```bash
-    cd e-Paper/RaspberryPi_JetsonNano/python
+    cd e-Paper/RaspberryPi_JetsonNano/python/examples
     ```
 
     ```bash
-    sudo python3 setup.py install
+    python3 epd_2in13b_V3_test.py
     ```
 
 ### 4. Get YouTube API Key and Fetch Stats
