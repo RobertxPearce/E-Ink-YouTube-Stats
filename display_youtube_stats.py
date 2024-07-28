@@ -11,7 +11,6 @@ logging.basicConfig(level=logging.DEBUG)
 API_KEY = 'YOUR API KEY'
 CHANNEL_ID = 'YOUR CHANNEL ID'
 
-
 def get_youtube_stats(api_key, channel_id):
     """
     Fetch YouTube channel statistics using the YouTube Data API.
@@ -39,7 +38,6 @@ def get_youtube_stats(api_key, channel_id):
     # Extract and return the statistics.
     return data['items'][0]['statistics']
 
-
 def display_stats_on_eink(stats):
     """
     Display YouTube channel statistics on the e-ink display.
@@ -47,6 +45,7 @@ def display_stats_on_eink(stats):
     Parameters:
         stats (dict): A dictionary containing channel statistics.
     """
+    epd = None
     try:
         # Initialize the e-ink display.
         epd = epd2in13_V3.EPD()
@@ -58,7 +57,12 @@ def display_stats_on_eink(stats):
         draw_black = ImageDraw.Draw(black_image)
 
         # Load a TrueType font.
-        font = ImageFont.truetype('/home/pi/youtube_stats_display/fonts/DejaVuSans-Bold.ttf', 18)
+        font_path = '/home/pi/youtube_stats_display/fonts/DejaVuSans-Bold.ttf'
+        try:
+            font = ImageFont.truetype(font_path, 18)
+        except IOError:
+            logging.error(f"Font file not found: {font_path}")
+            return
 
         # Draw the statistics on the image.
         draw_black.text((10, 10), 'Subscribers:', font=font, fill=0)
@@ -74,8 +78,11 @@ def display_stats_on_eink(stats):
     except Exception as e:
         # Log any errors and clean up the GPIO.
         logging.error(f"Error: {e}")
-        epd2in13_V3.epdconfig.module_exit(cleanup=True)
 
+    finally:
+        # Perform cleanup.
+        if epd:
+            epd.sleep()
 
 def main():
     try:
@@ -97,7 +104,9 @@ def main():
     except KeyboardInterrupt:
         # Log the interruption and clean up the GPIO.
         logging.info("Program interrupted")
-        epd2in13_V3.epdconfig.module_exit(cleanup=True)
+        # Perform any additional cleanup if needed.
+        # Note: Ensure `epd2in13_V3.epdconfig.module_exit` or equivalent is called here if necessary.
 
 if __name__ == '__main__':
-main()
+    main()
+
