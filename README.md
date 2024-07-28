@@ -82,6 +82,8 @@ This project sets up a Raspberry Pi Zero W with a Waveshare Three Color 2.13-inc
     nohup python3 display_youtube_stats.py &
     ```
 
+## Resources
+[Waveshare](https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT_(B)_Manual#Introduction)
 ## License
 
 This project is licensed under the MIT License.
